@@ -1,0 +1,2 @@
+1.0.0 - 7 Mar 2026
+- Initial version.
