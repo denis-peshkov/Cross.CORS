@@ -1,5 +1,9 @@
 namespace Cross.CORS;
 
+/// <summary>
+/// Action filter attribute that adds CORS headers to the response.
+/// Supports global configuration via <see cref="CorsRegistry.Register"/> or local configuration via constructor parameters.
+/// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
 public class AllowCrossOriginResourceSharingAttribute : ActionFilterAttribute
 {
@@ -14,8 +18,19 @@ public class AllowCrossOriginResourceSharingAttribute : ActionFilterAttribute
     private readonly bool _allowCredentials;
     private readonly bool _overrideGlobals;
 
+    /// <summary>
+    /// Initializes the attribute to use global configuration from <see cref="CorsRegistry.Register"/>.
+    /// </summary>
     public AllowCrossOriginResourceSharingAttribute() => _overrideGlobals = false;
 
+    /// <summary>
+    /// Initializes the attribute with local CORS configuration.
+    /// </summary>
+    /// <param name="allowOrigins">Allowed origins (comma or space separated). Use "*" for all origins.</param>
+    /// <param name="allowMethods">Allowed HTTP methods (comma separated). Default is "*".</param>
+    /// <param name="allowHeaders">Allowed request headers (comma separated). Default is "*".</param>
+    /// <param name="allowCredentials">Whether to allow credentials. Default is false.</param>
+    /// <exception cref="ArgumentException">Thrown when allowOrigins, allowMethods, or allowHeaders is null or empty.</exception>
     public AllowCrossOriginResourceSharingAttribute(
         string allowOrigins,
         string allowMethods = "*",
@@ -44,6 +59,7 @@ public class AllowCrossOriginResourceSharingAttribute : ActionFilterAttribute
         _overrideGlobals = true;
     }
 
+    /// <inheritdoc />
     public override void OnActionExecuted(ActionExecutedContext context)
     {
         if (context.HttpContext.Response.HasStarted)

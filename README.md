@@ -1,10 +1,27 @@
-# Cross.CORS [![Nuget](https://img.shields.io/nuget/v/Cross.CORS.svg)](https://nuget.org/packages/Cross.CORS/) [![Documentation](https://img.shields.io/badge/docs-wiki-yellow.svg)](https://github.com/denis-peshkov/Cross.CORS/wiki)
+[![License](https://img.shields.io/github/license/denis-peshkov/Cross.CORS)](LICENSE)
+[![GitHub Release Date](https://img.shields.io/github/release-date/denis-peshkov/Cross.CORS?label=released)](https://github.com/denis-peshkov/Cross.CORS/releases)
+[![NuGetVersion](https://img.shields.io/nuget/v/Cross.CORS.svg)](https://nuget.org/packages/Cross.CORS/)
+[![NugetDownloads](https://img.shields.io/nuget/dt/Cross.CORS.svg)](https://nuget.org/packages/Cross.CORS/)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Cross.CORS&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Cross.CORS)
+[![issues](https://img.shields.io/github/issues/denis-peshkov/Cross.CORS)](https://github.com/denis-peshkov/Cross.CORS/issues)
+[![.NET PR](https://github.com/denis-peshkov/Cross.CORS/actions/workflows/dotnet.yml/badge.svg?event=pull_request)](https://github.com/denis-peshkov/Cross.CORS/actions/workflows/dotnet.yml)
+
+![Size](https://img.shields.io/github/repo-size/denis-peshkov/Cross.CORS)
+[![GitHub contributors](https://img.shields.io/github/contributors/denis-peshkov/Cross.CORS)](https://github.com/denis-peshkov/Cross.CORS/contributors)
+[![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/denis-peshkov/Cross.CORS/latest?label=new+commits)](https://github.com/denis-peshkov/Cross.CORS/commits/master)
+![Activity](https://img.shields.io/github/commit-activity/w/denis-peshkov/Cross.CORS)
+![Activity](https://img.shields.io/github/commit-activity/m/denis-peshkov/Cross.CORS)
+![Activity](https://img.shields.io/github/commit-activity/y/denis-peshkov/Cross.CORS)
+
+# Cross.CORS
 
 ASP.NET Core library for configuring Cross-Origin Resource Sharing (CORS) via the `[AllowCrossOriginResourceSharing]` attribute and global `CorsConfig` configuration.
 
 **Supported frameworks:** .NET 6, .NET 7, .NET 8, .NET 9, .NET 10
 
 ## Install NuGet package
+
+Install the _Cross.CORS_ [NuGet package](https://www.nuget.org/packages/Cross.CORS/) into your .NET project:
 
 ```powershell
 Install-Package Cross.CORS

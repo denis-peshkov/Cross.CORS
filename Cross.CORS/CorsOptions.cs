@@ -51,6 +51,7 @@ public class CorsOptions
     /// <summary>
     /// Converts options to CorsConfig for use with CorsRegistry.Register().
     /// </summary>
+    /// <returns>A CorsConfig instance with values from this options object.</returns>
     public CorsConfig ToCorsConfig()
     {
         return new CorsConfig(

@@ -7,16 +7,33 @@
     <owners>Denis Peshkov</owners>
     <projectUrl>https://github.com/denis-peshkov/Cross.CORS</projectUrl>
     <repository type="git" url="https://github.com/denis-peshkov/Cross.CORS.git" />
-    <description>ASP.NET Core library for configuring Cross-Origin Resource Sharing (CORS) via the [AllowCrossOriginResourceSharing] attribute and global CorsConfig configuration.</description>
-    <tags>.NET ASP.NET ASP.NETCore MVC CORS Cross-Origin Attribute Filter CorsConfig</tags>
-    <readme>README.md</readme>
-    <icon>icon.png</icon>
-    <releaseNotes>
-      Initial version.
-    </releaseNotes>
     <copyright>Copyright 2026 Denis Peshkov</copyright>
     <license type="expression">MIT</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <readme>README.md</readme>
+    <icon>icon.png</icon>
+    <description>ASP.NET Core library for configuring Cross-Origin Resource Sharing (CORS) via the [AllowCrossOriginResourceSharing] attribute and global CorsConfig configuration.</description>
+    <tags>.NET ASP.NET ASP.NETCore MVC CORS Cross-Origin Attribute Filter CorsConfig</tags>
+    <releaseNotes>
+      Initial version.
+    </releaseNotes>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Microsoft.Extensions.Configuration.Binder" version="8.0.2" />
+      </group>
+      <group targetFramework="net7.0">
+        <dependency id="Microsoft.Extensions.Configuration.Binder" version="8.0.2" />
+      </group>
+      <group targetFramework="net8.0">
+        <dependency id="Microsoft.Extensions.Configuration.Binder" version="8.0.2" />
+      </group>
+      <group targetFramework="net9.0">
+        <dependency id="Microsoft.Extensions.Configuration.Binder" version="9.0.14" />
+      </group>
+      <group targetFramework="net10.0">
+        <dependency id="Microsoft.Extensions.Configuration.Binder" version="10.0.5" />
+      </group>
+    </dependencies>
   </metadata>
   <files>
     <file src="..\Cross.CORS\bin\Release\net6.0\Cross.CORS*.*" target="lib\net6.0" />
