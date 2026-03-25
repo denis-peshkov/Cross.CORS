@@ -1,2 +1,11 @@
-1.0.0 - 7 Mar 2026
+Release Notes - Cross.CORS
+
+https://github.com/denis-peshkov/Cross.CORS/releases
+
+v1.0.0 - 7 Mar 2026
 - Initial version.
+
+v1.1.0 - 28 Mar 2026
+- NuGet: `Microsoft.Extensions.Configuration.Binder` per TFM; matching nuspec dependency groups.
+- CI: OpenCover → SonarCloud; workflow triggers trimmed.
+- XML docs on public types; README badges.
